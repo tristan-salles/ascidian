@@ -1,0 +1,45 @@
+# FC MPI compiler to use
+FC = /usr/local/badlands/mpich/bin/mpif90
+# C MPI compiler to use
+CC = /usr/local/badlands/mpich/bin/mpicc
+# C MPI compiler to use
+CPP = /usr/local/badlands/mpich/bin/mpic
+
+# Executable name
+EXE=ascidian
+
+# Shared library name
+SHAREFLAGS=-dynamiclib -install_name libLECODE.4.dylib -compatibility_version 4.0 -current_version 4.0.1
+PLUGLIB= libLECODE.4.0.1.dylib
+PLUGSLN= libLECODE.4.dylib
+SHARELIB= libLECODE.dylib
+
+# Rules to make library
+AR = ar -rcs
+
+# C/C++ optimisation flags
+CFLAGS= -O2 -fno-common
+CPPFLAGS= -O2 -fno-common
+
+F77FLAGS = -O3 -m64 -w -fno-second-underscore
+#F77FLAGS= -O0 -g -fbounds-check -fbacktrace -finit-real=zero\
+    -ffpe-trap=zero,overflow,invalid -fno-common\
+    -Wtabs -Wuninitialized
+
+# Fortran optimisation flags
+FCFLAGS=-O3 -funroll-loops --param max-unroll-times=2 -cpp \
+    -ffree-form -ftree-vectorize -ffast-math -lstdc++ -ffree-line-length-none
+#FCFLAGS=-O3 -cpp -lstdc++
+#FCFLAGS= -O0 -g -fcheck=bounds -Wall -fbacktrace -finit-real=zero\
+	-ffpe-trap=zero,overflow,invalid -ffree-form -fno-common\
+	-Wtabs -Wunused-parameter -Wuninitialized  -ffree-line-length-none -cpp \
+	-fdump-fortran-optimized -fdump-tree-original -lstdc++
+
+# Linked libraries
+FOX=/usr/local/badlands/FoX/bin
+
+HDF5=/usr/local/badlands/hdf5
+#HDF5=/usr/local/hdf5
+H5LDFLAGS = -L${HDF5}/lib
+H5FLAGS = -I${HDF5}/include
+H5LIBS =  -lhdf5_fortran -lhdf5  -lhdf5hl_fortran -lhdf5_hl -lz
