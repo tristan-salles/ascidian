@@ -29,7 +29,7 @@ Reference:
 
 ## Input/output
 
-**ascidian** uses a XmL input file and output are generate in hdf5. The results are directly visualised in Paraview or MayaVI. 
+**ascidian** uses a XmL input file and outputs are generate in hdf5. The results are directly visualised in Paraview or MayaVI. 
 
 ## Example
 
