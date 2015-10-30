@@ -1,7 +1,7 @@
 <div align="left">
     <img width=100 src="https://c1.staticflickr.com/9/8543/8982514796_309c8553b0_b.jpg" alt="ascidian" title="ascidian"</img>
 </div>
-# ascidian: parallel 2D wind driven ocean circulation wave model
+# ascidian: parallel 2D wind driven ocean circulation & wave model
 
 **ascidian** is intended to simulate regional-scale wind driven ocean circulation by simulating:
 - 2D ocean currents, and
@@ -13,7 +13,7 @@ In comparison to other approaches used for geological problem, the model solves 
 
 The model is built around 2 codes:
 - a simplified version of the spectral wave model **SWAN** (**S**imulating **WA**ve **N**earshore)
-- a updated version of the tide and wind driven circulation model (**TAWIC**) 
+- an updated version of the tide and wind driven circulation model (**TAWIC**) 
 
 ## SWAN
 
@@ -29,7 +29,7 @@ Reference:
 
 ## Input/output
 
-**ascidian** uses a XmL input file and outputs are generate in hdf5. The results are directly visualised in Paraview or MayaVI. 
+**ascidian** uses a XmL input file and outputs are generated in hdf5. The results are directly visualised in Paraview or MayaVI. 
 
 ## Example
 
