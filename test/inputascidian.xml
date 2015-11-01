@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BADLANDS:input xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:BADLANDS="http://bibucket.com/git/xsd/XSDBADLANDS" xmlns:xi="http://www.w3.org/2001/XInclude"
+	xsi:schemaLocation="http://bibucket.com/git/xsd/XSDBADLANDS
+	bibucket.com/git/xsd/XSDBADLANDS/schema-BADLANDS.xsd">
+
+	<TopoGrid>
+    <Grid>data/gab_topo.nodes</Grid>
+    <GridX>250</GridX>
+    <GridY>249</GridY>
+    <GridSpace>3000</GridSpace>
+    <latGrid>-32.5</latGrid>
+		<syncFolder>Poseidon</syncFolder>
+    <spmForcing>0</spmForcing>
+    <initDep>50</initDep>
+    <circForcing>1</circForcing>
+    <waveForcing>1</waveForcing>
+  </TopoGrid>
+
+	<Time>
+		<startTime>0.</startTime>
+    <endTime>1.</endTime>
+    <syncTime>1.</syncTime>
+		<outputTime>1.</outputTime>
+	</Time>
+
+	<CirculationParam>
+	  <Courant>1.</Courant>
+	  <stormTime>24</stormTime>
+	  <fricCoef>0.0005</fricCoef>
+      <filterStep>10</filterStep>
+      <actionMaxDepth>200.0</actionMaxDepth>
+	</CirculationParam>
+
+	<OceanForecast>
+	  <waveBase>50.0</waveBase>
+	  <nbForecast>1</nbForecast>
+    <forecastClass>
+			<subgroupNb>1</subgroupNb>
+      <start>0</start>
+      <end>1</end>
+	    <subgroupParam>0.3 30.0 140.0</subgroupParam>
+	  </forecastClass>
+	</OceanForecast>
+
+	<OutputDirectory>GABcirc</OutputDirectory>
+
+</BADLANDS:input>

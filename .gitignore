@@ -1,0 +1,7 @@
+*.o
+*.so
+*.mod
+*.original
+.DS_Store
+.DS_Store?
+*.a

@@ -118,7 +118,7 @@ module swan_coupler_functions
 
     ! Imported spectral wave initial conditions
     type ImpSpecWa
-        ! [hs] the signiﬁcant wave height (in m).
+        ! [hs] the significant wave height (in m).
         real :: hs
         ! [per] the characteristic period of the energy spectrum
         real :: per
@@ -386,7 +386,7 @@ contains
                 endif
             enddo
         enddo
-        
+
         return
 
     end subroutine import_bathymetry

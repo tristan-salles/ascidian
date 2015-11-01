@@ -188,7 +188,7 @@ end module mpidata
 ! ============================================================================
 module precision_data
 
-  use mpidata
+  !use mpidata
 
   ! Input / output files
   character(len=128)::finput
